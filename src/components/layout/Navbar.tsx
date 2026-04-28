@@ -12,9 +12,18 @@ function navLinkClass({ isActive }: { isActive: boolean }) {
 
 export function Navbar() {
   return (
-    <nav className="flex items-center gap-2">
+    <nav className="flex items-center gap-4">
       <NavLink to="/" className={navLinkClass} end>
         Home
+      </NavLink>
+      <NavLink to="/menu" className={navLinkClass}>
+        Menu
+      </NavLink>
+      <NavLink to="/about" className={navLinkClass}>
+        About
+      </NavLink>
+      <NavLink to="/contact" className={navLinkClass}>
+        Contact
       </NavLink>
     </nav>
   );
