@@ -9,7 +9,7 @@ export function Header() {
         {/* Logo and Brand */}
         <div className="flex items-center gap-3 flex-shrink-0">
           <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#ff6b4a] to-[#ff9d7a] shadow-[0_8px_20px_-10px_rgba(217,72,40,0.8)]" />
-          <span className="text-xl font-extrabold text-[#26170e]">{env.appName}</span>
+          <span className="text-xl font-extrabold text-[#26170e]">{env.VITE_APP_NAME}</span>
         </div>
 
         {/* Contact Info */}
