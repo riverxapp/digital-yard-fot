@@ -13,7 +13,7 @@ export function Home() {
               Taste the Authentic Flavors of Our Restaurant
             </h1>
             <p className="text-lg sm:text-xl max-w-xl mb-8 leading-relaxed text-[#6f5b4a]">
-              Experience a culinary journey with our chef’s精选ingredients and signature dishes crafted to delight every palate.
+              Experience a culinary journey with our chef&rsquo;s精选ingredients and signature dishes crafted to delight every palate.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-[#d94828] text-white hover:bg-[#b5341f]">
