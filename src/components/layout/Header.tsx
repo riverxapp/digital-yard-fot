@@ -2,7 +2,7 @@ import { env } from "../../lib/env";
 import { Button } from "../ui/button";
 import { Navbar } from "./Navbar";
 
-export function Header() {
+export default function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-[#f1ddc9] bg-[#fffaf2]/90 backdrop-blur-md shadow-sm">
       <div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-4 p-4 sm:px-6 lg:px-8">
