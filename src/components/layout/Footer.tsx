@@ -1,6 +1,6 @@
 import { env } from "../../lib/env";
 
-export function Footer() {
+export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
