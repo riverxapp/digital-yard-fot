@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="mt-10 border-t border-gray-300 bg-gray-50 px-6 py-8">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row md:justify-between md:items-center gap-6">
         <div className="flex flex-col space-y-2 text-sm text-gray-700">
-          <p><strong>Restaurant Name</strong></p>
+          <p><strong>RiverX Restaurant</strong></p>
           <address className="not-italic">
             123 Main Street<br />
             Anytown, USA 12345<br />
@@ -16,7 +16,7 @@ export function Footer() {
         </div>
         <div className="flex space-x-6">
           <a
-            href="https://facebook.com/restaurant"
+            href="https://facebook.com/riverxrestaurant"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -27,7 +27,7 @@ export function Footer() {
             </svg>
           </a>
           <a
-            href="https://twitter.com/restaurant"
+            href="https://twitter.com/riverxrestaurant"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
@@ -38,7 +38,7 @@ export function Footer() {
             </svg>
           </a>
           <a
-            href="https://instagram.com/restaurant"
+            href="https://instagram.com/riverxrestaurant"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mt-8 border-t border-gray-200 pt-4 text-center text-xs text-gray-500">
-        &copy; {year} {env.appName}. All rights reserved.
+        &copy; {year} {env.VITE_APP_NAME}. All rights reserved.
       </div>
     </footer>
   );
