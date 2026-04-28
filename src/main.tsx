@@ -1,13 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { App } from "./app/App";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import AppLayout from "./components/layout/AppLayout";
+import Home from "./pages/home";
 import "./styles/globals.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AppLayout>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </AppLayout>
     </BrowserRouter>
   </React.StrictMode>
 );
