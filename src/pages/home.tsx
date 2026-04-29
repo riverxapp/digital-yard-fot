@@ -4,12 +4,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 
 export function Home() {
   return (
-    <main className="space-y-20">
+    <main className="space-y-20" aria-label="Homepage main content">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#f0ebe3] py-24 px-6 sm:px-12 text-[#26170e]">
+      <section
+        className="relative overflow-hidden bg-[#f0ebe3] py-24 px-6 sm:px-12 text-[#26170e]"
+        aria-labelledby="hero-heading"
+      >
         <div className="container mx-auto max-w-7xl">
           <div className="max-w-4xl">
-            <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+            <h1
+              id="hero-heading"
+              className="text-5xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6"
+            >
               Taste the Authentic Flavors of Our Restaurant
             </h1>
             <p className="text-lg sm:text-xl max-w-xl mb-8 leading-relaxed text-[#6f5b4a]">
@@ -17,10 +23,19 @@ export function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-[#d94828] text-white hover:bg-[#b5341f]">
-                <Link to="/menu">View Menu</Link>
+                <Link to="/menu" aria-label="View our menu">
+                  View Menu
+                </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-[#d94828] text-[#d94828] hover:bg-[#fee9db]">
-                <Link to="/reservation">Make Reservation</Link>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-[#d94828] text-[#d94828] hover:bg-[#fee9db]"
+              >
+                <Link to="/reservation" aria-label="Make a reservation">
+                  Make Reservation
+                </Link>
               </Button>
             </div>
           </div>
@@ -34,9 +49,15 @@ export function Home() {
       </section>
 
       {/* Value Proposition */}
-      <section className="container mx-auto max-w-6xl px-6 sm:px-12 space-y-12">
+      <section
+        className="container mx-auto max-w-6xl px-6 sm:px-12 space-y-12"
+        aria-labelledby="value-prop-heading"
+      >
+        <h2 id="value-prop-heading" className="sr-only">
+          Our Value Propositions
+        </h2>
         <div className="grid gap-12 md:grid-cols-3">
-          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-md">
+          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-md" role="region" aria-label="Farm Fresh Ingredients">
             <CardHeader>
               <CardTitle className="text-2xl text-[#26170e]">Farm Fresh Ingredients</CardTitle>
               <CardDescription className="text-[#6f5b4a]">
@@ -48,7 +69,7 @@ export function Home() {
             </CardContent>
           </Card>
 
-          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-md">
+          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-md" role="region" aria-label="Inviting Atmosphere">
             <CardHeader>
               <CardTitle className="text-2xl text-[#26170e]">Inviting Atmosphere</CardTitle>
               <CardDescription className="text-[#6f5b4a]">
@@ -60,7 +81,7 @@ export function Home() {
             </CardContent>
           </Card>
 
-          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-md">
+          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-md" role="region" aria-label="Exceptional Service">
             <CardHeader>
               <CardTitle className="text-2xl text-[#26170e]">Exceptional Service</CardTitle>
               <CardDescription className="text-[#6f5b4a]">
@@ -75,15 +96,25 @@ export function Home() {
       </section>
 
       {/* Featured Menu */}
-      <section className="bg-[#fff7ec] py-20 px-6 sm:px-12">
+      <section
+        className="bg-[#fff7ec] py-20 px-6 sm:px-12"
+        aria-labelledby="featured-menu-heading"
+      >
         <div className="container mx-auto max-w-6xl space-y-10">
-          <h2 className="text-4xl font-semibold text-[#26170e]">Featured Menu Items</h2>
+          <h2 id="featured-menu-heading" className="text-4xl font-semibold text-[#26170e]">
+            Featured Menu Items
+          </h2>
           <div className="grid gap-8 md:grid-cols-3">
-            <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm">
+            <Card
+              className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm"
+              role="region"
+              aria-label="Grilled Seasonal Vegetables"
+            >
               <img
                 src="/images/dish-1.jpg"
                 alt="Grilled Seasonal Vegetables"
                 className="h-48 w-full object-cover rounded-t-lg"
+                loading="lazy"
               />
               <CardHeader>
                 <CardTitle className="text-xl text-[#26170e]">Grilled Seasonal Vegetables</CardTitle>
@@ -94,11 +125,16 @@ export function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm">
+            <Card
+              className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm"
+              role="region"
+              aria-label="Herb-Crusted Lamb Chops"
+            >
               <img
                 src="/images/dish-2.jpg"
                 alt="Herb-Crusted Lamb Chops"
                 className="h-48 w-full object-cover rounded-t-lg"
+                loading="lazy"
               />
               <CardHeader>
                 <CardTitle className="text-xl text-[#26170e]">Herb-Crusted Lamb Chops</CardTitle>
@@ -109,11 +145,16 @@ export function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm">
+            <Card
+              className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm"
+              role="region"
+              aria-label="Classic Tiramisu Dessert"
+            >
               <img
                 src="/images/dish-3.jpg"
                 alt="Classic Tiramisu Dessert"
                 className="h-48 w-full object-cover rounded-t-lg"
+                loading="lazy"
               />
               <CardHeader>
                 <CardTitle className="text-xl text-[#26170e]">Classic Tiramisu Dessert</CardTitle>
@@ -128,19 +169,42 @@ export function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="container mx-auto max-w-6xl px-6 sm:px-12 py-20">
-        <h2 className="text-4xl font-semibold mb-12 text-[#26170e]">What Our Guests Say</h2>
+      <section
+        className="container mx-auto max-w-6xl px-6 sm:px-12 py-20"
+        aria-labelledby="testimonials-heading"
+      >
+        <h2 id="testimonials-heading" className="text-4xl font-semibold mb-12 text-[#26170e]">
+          What Our Guests Say
+        </h2>
         <div className="grid gap-12 md:grid-cols-3">
-          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm p-6 flex flex-col justify-between">
-            <blockquote className="text-[#6f5b4a] italic mb-4">"The food was incredible and the ambiance was perfect for a relaxing evening."</blockquote>
+          <Card
+            className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm p-6 flex flex-col justify-between"
+            role="region"
+            aria-label="Testimonial from Sarah M."
+          >
+            <blockquote className="text-[#6f5b4a] italic mb-4" tabIndex={0}>
+              "The food was incredible and the ambiance was perfect for a relaxing evening."
+            </blockquote>
             <footer className="text-sm font-semibold text-[#26170e]">– Sarah M.</footer>
           </Card>
-          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm p-6 flex flex-col justify-between">
-            <blockquote className="text-[#6f5b4a] italic mb-4">"Friendly staff and exquisite dishes. Highly recommend the lamb chops."</blockquote>
+          <Card
+            className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm p-6 flex flex-col justify-between"
+            role="region"
+            aria-label="Testimonial from Michael L."
+          >
+            <blockquote className="text-[#6f5b4a] italic mb-4" tabIndex={0}>
+              "Friendly staff and exquisite dishes. Highly recommend the lamb chops."
+            </blockquote>
             <footer className="text-sm font-semibold text-[#26170e]">– Michael L.</footer>
           </Card>
-          <Card className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm p-6 flex flex-col justify-between">
-            <blockquote className="text-[#6f5b4a] italic mb-4">"An authentic dining experience with fresh ingredients and great service."</blockquote>
+          <Card
+            className="border-[#f1ddc9] bg-[#fffaf2] shadow-sm p-6 flex flex-col justify-between"
+            role="region"
+            aria-label="Testimonial from Emily R."
+          >
+            <blockquote className="text-[#6f5b4a] italic mb-4" tabIndex={0}>
+              "An authentic dining experience with fresh ingredients and great service."
+            </blockquote>
             <footer className="text-sm font-semibold text-[#26170e]">– Emily R.</footer>
           </Card>
         </div>
